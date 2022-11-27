@@ -26,6 +26,6 @@ sed -i 's/.disabled=1/.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac8
 sed -n '/.disabled=0/p' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 echo 'Change wifi enable done'
 # Change timezone Asia/Shanghai
-sed -i "s_timezone='UTC'_timezone='Asia/Shanghai'_g" package/base-files/files/bin/config_generate
-sed -n "_timezone='Asia/Shanghai'_p" package/base-files/files/bin/config_generate
+sed -i "s#timezone='UTC'#timezone='Asia/Shanghai'#g" package/base-files/files/bin/config_generate
+sed -n "/timezone='Asia\/Shanghai'/p" package/base-files/files/bin/config_generate
 echo 'Change timezone done'
