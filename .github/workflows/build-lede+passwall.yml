@@ -7,9 +7,9 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-# OpenWrt bace+passwall+commands+ 
+# OpenWrt Lede bace+passwall+ipv6
 
-name: Test Build
+name: Build LEDE+passwall+ipv6
 
 on:
   repository_dispatch:
@@ -24,8 +24,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: testBuild.config
-  DIY_P1_SH: diy-part1.sh
+  CONFIG_FILE: build-lede+passwall.config
+  DIY_P1_SH: add-passwall-feeds.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
